@@ -29,6 +29,14 @@ android {
                 "proguard-rules.pro"
             )
         }
+
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -39,6 +47,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -67,4 +76,6 @@ dependencies {
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
+
+    implementation(project(":utilities"))
 }
