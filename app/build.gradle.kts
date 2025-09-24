@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.dagger.hilt.android)
+
 }
 
 android {
@@ -56,4 +59,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Coroutine
+    implementation(libs.android.coroutine)
+
+    //Dagger hilt
+    implementation(libs.dagger.hilt)
+    ksp(libs.dagger.compiler)
+    implementation(libs.dagger.hilt.navigation.compose)
 }
