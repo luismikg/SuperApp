@@ -77,5 +77,8 @@ dependencies {
     ksp(libs.dagger.compiler)
     implementation(libs.dagger.hilt.navigation.compose)
 
+    //Splash
+    implementation(libs.splash.screen)
+
     implementation(project(":utilities"))
 }
