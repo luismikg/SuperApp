@@ -1,11 +1,11 @@
-package com.luis.superapp
+package com.luis.superapp.presentation.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.luis.superapp.ui.theme.SuperAppTheme
+import com.luis.superapp.presentation.ui.theme.SuperAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
